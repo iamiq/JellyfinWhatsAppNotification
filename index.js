@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 // WhatsApp group IDs
-const groupId1 = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX@g.us';
+const groupId1 = '120363422328240076@g.us';
 const groupId2 = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX@g.us';
 
 const client = new Client({
@@ -131,4 +131,5 @@ app.post('/newcontent', async (req, res) => {
 app.listen(port, () => {
     console.log(`🚀 Server listening on port ${port}`);
 });
+
 
