@@ -11,8 +11,11 @@ const groupId1 = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX@g.us';
 const groupId2 = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX@g.us';
 
 const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: { headless: true }
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  }
 });
 
 client.on('qr', qr => {
@@ -128,3 +131,4 @@ app.post('/newcontent', async (req, res) => {
 app.listen(port, () => {
     console.log(`🚀 Server listening on port ${port}`);
 });
+
